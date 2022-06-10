@@ -17,6 +17,12 @@ enabled).
 3. A password reset process sending a token by email.
 4. A possibility to disable the 2FA for a user.
 
+## Interesting file
+
+The authentication mechanism is implemented here: [https://github.com/rya-sge/2FA-yubikey/blob/main/server/src/authentication.rs](https://github.com/rya-sge/2FA-yubikey/blob/main/server/src/authentication.rs)
+
+
+
 ## Configuration
 
 On the server side, change the configuration for sending email in mailer.rs
