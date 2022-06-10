@@ -2,6 +2,21 @@
 
 The project was created from a template proposed by the teacher. The functions to communicate from the server to the client were not created by me.
 
+The goal of this lab is to implement a two-factor authentication mechanism (2FA). We will
+use the following two factors:
+
+- A password
+- A Yubikey (https://www.yubico.com/)
+
+You have to implement the following features:
+
+1. A registration process asking for a password, an email address, and a Yubikey. The
+email is going to be used as a username and to reset the password.
+2. A login process asking for an email address, a password, and a Yubikey (when 2FA is
+enabled).
+3. A password reset process sending a token by email.
+4. A possibility to disable the 2FA for a user.
+
 ## Configuration
 
 On the server side, change the configuration for sending email in mailer.rs
