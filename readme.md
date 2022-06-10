@@ -2,6 +2,10 @@
 
 The project was created from a template proposed by the teacher. The functions to communicate from the server to the client were not created by me.
 
+## Instruction
+
+### Main goal
+
 The goal of this lab is to implement a two-factor authentication mechanism (2FA). We will
 use the following two factors:
 
@@ -16,6 +20,20 @@ email is going to be used as a username and to reset the password.
 enabled).
 3. A password reset process sending a token by email.
 4. A possibility to disable the 2FA for a user.
+
+### Authentication
+
+- Regarding password authentication, we will use strong authentication using a
+  challenge-response protocol. This means that we do not send the password to authen-
+  ticate. Instead, we receive a challenge, which is a random value (e.g. 128 bits) and we
+  have to compute a response using a MAC algorithm and a key. In this lab, we are
+  going to use the HMAC-SHA256 algorithm. The key for the MAC will be derived from
+  the password using a hash function of your choice.1
+- For the second factor, using the Yubikey, we will use the PIV authentication (https://
+  developers.yubico.com/PIV/, https://docs.rs/yubikey/0.5.0/yubikey/piv/index.
+  html). Regarding the signature algorithm, we will use the ECDSA signature algorithm
+  over the elliptic curve P-256. You do not need to understand the advantages and
+  problems of these various algorithms in this class.
 
 ## Interesting file
 
